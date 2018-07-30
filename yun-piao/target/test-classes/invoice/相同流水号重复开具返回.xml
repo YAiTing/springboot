@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<business id="FPKJ">
+    <body>
+        <returncode>0</returncode>
+        <returnmsg>该发票开具完成</returnmsg>
+    </body>
+</business>

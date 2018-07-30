@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<business id="FPKJ" source="NB">
+    <body>
+        <input>
+            <fpqqlsh>201807231344003
+            </fpqqlsh>
+            <kpm>NTAwMTAyMDEwMDAxNDQ4MjAxODA3MjMxNDU3MzgyMTU5NjkwNA==</kpm>
+            <jsbh>500102010001448~~499000115575</jsbh>
+            <fplxdm>007</fplxdm>
+            <kplx>0</kplx>
+            <yhlx>4</yhlx>
+            <ghdwsbh>91320191MA1ML4CL25</ghdwsbh>
+            <ghdwmc>大掌柜</ghdwmc>
+            <ghdwdzdh>bank of china</ghdwdzdh>
+            <ghdwyhzh>ningbo hangzh</ghdwyhzh>
+            <qdbz>0</qdbz>
+            <is_apply>0</is_apply>
+            <fyxm count="1">
+                <group
+                        xh="1">
+                    <fphxz>0</fphxz>
+                    <spmc>shdh</spmc>
+                    <spsm/>
+                    <ggxh>hb</ggxh>
+                    <dw>hh</dw>
+                    <spsl>1.000</spsl>
+                    <dj>9.7087378641</dj>
+                    <je>9.71</je>
+                    <sl>0.03</sl>
+                    <se>0.29</se>
+                    <spbm>1050201010000000000</spbm>
+                    <zxbm/>
+                    <yhzcbs>0</yhzcbs>
+                    <lslbs/>
+                    <zzstsgl/>
+                </group>
+            </fyxm>
+            <bz/>
+            <skr>Admin</skr>
+            <fhr>ADMIN</fhr>
+            <kpr>Admin</kpr>
+            <yfpdm/>
+            <yfphm/>
+            <sprsjh/>
+        </input>
+    </body>
+</business>

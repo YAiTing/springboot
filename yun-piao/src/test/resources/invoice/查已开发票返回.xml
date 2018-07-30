@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<business id="FPCX">
+    <body>
+        <returncode>0</returncode>
+        <returnmsg>查询成功</returnmsg>
+        <returndata>
+            <kpxx>
+                <fpdm>050000000003</fpdm>
+                <fphm>28128282</fphm>
+                <fpzt>00</fpzt>
+                <sksbbh>499000115575</sksbbh>
+                <kprq>20180723150016</kprq>
+                <ghdwsbh>91320191MA1ML4CL25</ghdwsbh>
+                <ghdwmc><![CDATA[大掌柜]]></ghdwmc>
+                <hjje>9.71</hjje>
+                <hjse>0.29</hjse>
+                <jshj>10.0</jshj>
+                <url></url>
+                <skm>
+                    <![CDATA[03+38*6&amp;gt;9892352/-563+&amp;lt;&amp;gt;*253+71/2+5-2+*380/+4&amp;gt;27&amp;gt;5*&amp;lt;4/62*/&amp;gt;&amp;lt;&amp;gt;+6770234298-94/6&amp;lt;*80*7/8/266+-&amp;gt;99&amp;lt;01260*063-*&amp;lt;6569*9]]></skm>
+                <jym>15007621215412968857</jym>
+            </kpxx>
+        </returndata>
+    </body>
+</business>
