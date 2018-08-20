@@ -2,14 +2,12 @@ package com.yb.invoice.vo;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.yb.invoice.IInvoice;
-import com.yb.invoice.InvoiceBusinessTypeEnum;
-import org.springframework.context.annotation.ComponentScan;
+import com.yb.invoice.entity.InvoiceBusinessTypeEnum;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.NavigableMap;
 
 /**
  * @Author: yangb

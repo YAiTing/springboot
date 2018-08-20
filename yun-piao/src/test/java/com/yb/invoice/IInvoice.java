@@ -1,7 +1,6 @@
 package com.yb.invoice;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.yb.invoice.entity.InvoiceBusinessTypeEnum;
 
 /**
  * @Author: yangb

@@ -1,7 +1,8 @@
 package com.yb.springboot;
 
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -14,8 +15,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringbootApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
-		context.refresh();
+		ConfigurableApplicationContext context = new SpringApplicationBuilder(SpringbootApplication.class)
+				.web(WebApplicationType.SERVLET)
+				.run(args);
 		context.close();
+//		ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
+//		context.refresh();
+//		context.close();
 	}
 }

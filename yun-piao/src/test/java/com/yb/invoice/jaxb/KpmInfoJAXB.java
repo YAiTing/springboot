@@ -1,8 +1,5 @@
 package com.yb.invoice.jaxb;
 
-import com.yb.invoice.IInvoice;
-import com.yb.invoice.InvoiceBusinessTypeEnum;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;

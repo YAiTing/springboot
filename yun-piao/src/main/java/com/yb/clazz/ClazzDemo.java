@@ -1,8 +1,7 @@
 package com.yb.clazz;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * @Author: yangb
@@ -31,6 +30,11 @@ public class ClazzDemo {
 		System.out.println(field.getDeclaringClass().equals(clazz));
 		System.out.println(field.getType());
 
+		F f = new F();
+		Method m = F.class.getMethod("print", String.class);
+		Method m1 = F.class.getMethod("print", String.class);
+		System.out.println(m1.equals(m));
+		System.out.println(m1==m);
 	}
 
 

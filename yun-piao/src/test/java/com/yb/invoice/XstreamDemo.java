@@ -5,14 +5,9 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.converters.basic.DateConverter;
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.xml.CompactWriter;
 
-import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Date;
 import java.util.List;
@@ -27,14 +22,24 @@ public class XstreamDemo {
 		A a = new A();
 		a.setSqm("1");
 		a.setCzlx("操作类型");
+		a.setCreateDate(new Date());
+//		XStream x = new XStream(new StaxDriver());
 		XStream x = new XStream();
-		x.registerConverter(new DateConverter());
+		x.registerConverter(new DateConverter("YYYYMMDD", new String[]{"YYYYMMDD"}));
 		x.autodetectAnnotations(true);
 		StringWriter writer = new StringWriter();
 		writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n");
 		x.toXML(a, writer);
 		String xml = writer.toString();
 		System.out.println(xml);
+	}
+
+	public static String obj2xmlByXStream(Object obj) {
+		XStream xst = new XStream();
+		xst.processAnnotations(obj.getClass());
+		StringWriter writer = new StringWriter();
+		xst.marshal(obj,new CompactWriter(writer));
+		return writer.toString();
 	}
 
 	@XStreamAlias("input")
@@ -97,21 +102,4 @@ public class XstreamDemo {
 		}
 	}
 
-	private static class ListAttrConverter implements Converter {
-
-		@Override
-		public boolean canConvert(Class type) {
-			return type.equals(List.class);
-		}
-
-		@Override
-		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-
-		}
-
-		@Override
-		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-			return null;
-		}
-	}
 }
