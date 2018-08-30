@@ -7,9 +7,11 @@
 	<artifactId>springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
+		<module>boot</module>
 		<module>yun-piao</module>
-		<module>web</module>
-	</modules>
+        <module>spring-application</module>
+        <module>web-mvc</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>springboot</name>

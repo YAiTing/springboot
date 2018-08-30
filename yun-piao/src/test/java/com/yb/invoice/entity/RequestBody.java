@@ -6,10 +6,9 @@ import java.io.Serializable;
 
 /**
  * @Author: yangb
- * @Description:
- * @Date: Created in 11:02 2017/12/8
+ * @Description: 请求BODY
  */
-public class RequestBody<T> implements Serializable{
+public class RequestBody<T> implements Serializable {
 
 	@XStreamAlias("input")
 	private T input;

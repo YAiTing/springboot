@@ -11,7 +11,7 @@ public class KpmRequestInfo extends RequestInfo {
 	private String nsrsbh;
 
 	/**纳税人识别号 传空即可*/
-	private String sqm;
+	private String sqm="";
 
 	public String getNsrsbh() {
 		return nsrsbh;

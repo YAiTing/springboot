@@ -58,17 +58,17 @@ public class InvoiceDemo extends AbstractDrawBill {
 	@Test
 	public void getKpm() throws IOException {
 		RestTemplate restTemplate = getRestTemplate();
-		String token = "f2af61586a014365bcbded5f16da9356";
+		String token = "195a7448b6d24eec9518f6295f4f9352";
 		String url = "http://www.366tax.cn:10001/dzfpkp/NByunpiao/" + token + ".htm";
 		KpmRequestInfo kpmRequestInfo = new KpmRequestInfo();
 		kpmRequestInfo.setNsrsbh("500102010001448");
+		kpmRequestInfo.setSqm("ZciG+4KYN9b3tnuuhy4OtDlksYeK8C7cLq44je7UUzGlnO/d8PUPyQ==");
 		String xml = toXml(kpmRequestInfo);
 		String request = Base64.getEncoder().encodeToString(xml.getBytes("UTF-8"));
-//		HttpEntity<String> entity = new HttpEntity<>(request);
-//		String result = restTemplate.postForObject(url, entity, String.class);
-//		String fromXml = new String(Base64.getDecoder().decode(result), "utf-8");
-//		fromXml(fromXml, kpm);
-//		System.out.println("result:" + fromXml);
+		HttpEntity<String> entity = new HttpEntity<>(request);
+		String result = restTemplate.postForObject(url, entity, String.class);
+		String fromXml = new String(Base64.getDecoder().decode(result), "utf-8");
+		System.out.println("result:" + fromXml);
 	}
 
 

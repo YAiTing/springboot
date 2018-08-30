@@ -7,6 +7,8 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.basic.DateConverter;
 import com.thoughtworks.xstream.io.xml.CompactWriter;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder;
 
 import java.io.StringWriter;
 import java.util.Date;
@@ -20,11 +22,11 @@ public class XstreamDemo {
 
 	public static void main(String[] args) {
 		A a = new A();
-		a.setSqm("1");
+		a.setIsApply("aaa");
 		a.setCzlx("操作类型");
 		a.setCreateDate(new Date());
 //		XStream x = new XStream(new StaxDriver());
-		XStream x = new XStream();
+		XStream x = new XStream( new DomDriver(null, new XmlFriendlyNameCoder("_-", "_")));
 		x.registerConverter(new DateConverter("YYYYMMDD", new String[]{"YYYYMMDD"}));
 		x.autodetectAnnotations(true);
 		StringWriter writer = new StringWriter();
@@ -45,7 +47,8 @@ public class XstreamDemo {
 	@XStreamAlias("input")
 	private static class A {
 
-		private String sqm;
+		@XStreamAlias("is_apply")
+		private String isApply;
 
 		private String czlx;
 
@@ -55,12 +58,12 @@ public class XstreamDemo {
 		@XStreamAlias("shsh")
 		private List<B> list = Lists.newArrayList(new B("a", 1), new B("b" ,2));
 
-		public String getSqm() {
-			return sqm;
+		public String getIsApply() {
+			return isApply;
 		}
 
-		public void setSqm(String sqm) {
-			this.sqm = sqm;
+		public void setIsApply(String isApply) {
+			this.isApply = isApply;
 		}
 
 		public List<B> getList() {
